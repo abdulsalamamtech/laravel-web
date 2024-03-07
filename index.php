@@ -1,7 +1,8 @@
 <?php 
 
-function returnTo($path = 'public'){
-    return header('location:/'. $path);
+function redirect($path = "/public/index.php"){
+    header('Location: '. $path);
+    die();
 }
 
-returnTo('public');
+redirect("/public/index.php");
