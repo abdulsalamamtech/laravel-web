@@ -1,8 +1,8 @@
 <?php 
 
-function redirect($path = "/public/index.php"){
+function redirectTo($path = "/public/index.php"){
     header('Location: '. $path);
     die();
 }
 
-redirect("/public/index.php");
+redirectTo("/public/index.php");
