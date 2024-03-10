@@ -23,6 +23,7 @@ Route::get('/dev', function () {
     return [
         'name' => 'Abdulsalam Abdulrahman',
         'username' => 'AbdulsalamAmtech',
+        'whatsapp' => '+2349091922467',
         'email' => 'abdulsalamamtech@gmail.com',
         'github' => 'https://www.github.com/abdulsalamamtech',
         'facebook' => 'https://www.facebook.com/abdulsalamamtech',
@@ -33,5 +34,12 @@ Route::get('/dev', function () {
 
 // Inspiration
 Route::get('/inspiration', function () {
-    return Inspiring::quote();
+    $word = [];
+    $counter = date('s');
+    for($i = 0; $i < (int) $counter; $i++){
+        $word[] = Inspiring::quote();
+    }
+
+    return view('inspiration', compact('word'));
+
 });
