@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Inspire
+Route::get('/inspire', function () {
+    return to_route('inspire');
+});
+
 // Developer Information
 Route::get('/dev', function () {
     return [
@@ -42,4 +47,4 @@ Route::get('/inspiration', function () {
 
     return view('inspiration', compact('word'));
 
-});
+})->name('inspire');
