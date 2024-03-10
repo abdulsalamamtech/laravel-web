@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,9 @@ Route::get('/dev', function () {
         'linkedin' => 'https://www.linkedin.com/abdulsalamamtech',
         'twitter-X' => 'https://www.twitter.com/abdulsalamtech',
     ];
+});
+
+// Inspiration
+Route::get('/inspiration', function () {
+    return Inspiring::quote();
 });
